@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-neutral-50 text-neutral-900 transition-colors duration-200 ease-in-out dark:bg-neutral-900 dark:text-neutral-50;
+  }
+  
+  h1 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+  
+  h2 {
+    @apply text-2xl font-bold md:text-3xl;
+  }
+  
+  h3 {
+    @apply text-xl font-semibold md:text-2xl;
+  }
+  
+  h4 {
+    @apply text-lg font-semibold md:text-xl;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-lg px-4 py-2 font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-500 text-white hover:bg-primary-600 focus:ring-primary-500 dark:bg-primary-600 dark:hover:bg-primary-500;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary-500 text-white hover:bg-secondary-600 focus:ring-secondary-500 dark:bg-secondary-600 dark:hover:bg-secondary-500;
+  }
+  
+  .btn-outline {
+    @apply btn border border-neutral-300 bg-transparent hover:bg-neutral-100 focus:ring-neutral-500 dark:border-neutral-700 dark:hover:bg-neutral-800;
+  }
+  
+  .card {
+    @apply rounded-xl bg-white p-4 shadow-md transition-all duration-200 dark:bg-neutral-800 md:p-6;
+  }
+  
+  .input {
+    @apply w-full rounded-lg border border-neutral-300 bg-white px-3 py-2 transition-all duration-200 focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500 dark:border-neutral-700 dark:bg-neutral-800 dark:focus:border-primary-400 dark:focus:ring-primary-400;
+  }
+  
+  .label {
+    @apply mb-1 block text-sm font-medium text-neutral-700 dark:text-neutral-300;
+  }
+}
+
+/* Calendar customizations */
+.react-calendar {
+  @apply w-full rounded-xl border-none bg-white p-4 shadow-md dark:bg-neutral-800;
+}
+
+.react-calendar__navigation button {
+  @apply rounded-md p-1 text-neutral-700 hover:bg-neutral-100 dark:text-neutral-300 dark:hover:bg-neutral-700;
+}
+
+.react-calendar__tile {
+  @apply rounded-md p-2 text-center;
+}
+
+.react-calendar__tile:enabled:hover {
+  @apply bg-neutral-100 dark:bg-neutral-700;
+}
+
+.react-calendar__tile--active {
+  @apply bg-primary-100 text-primary-700 dark:bg-primary-900 dark:text-primary-300;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  @apply text-error-500;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-full bg-neutral-200 dark:bg-neutral-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-neutral-400 hover:bg-neutral-500 dark:bg-neutral-600 dark:hover:bg-neutral-500;
+}
